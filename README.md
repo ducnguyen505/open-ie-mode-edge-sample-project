@@ -35,19 +35,19 @@ CustomKeywords.'com.example.openIEModeEdgeBrowser.openBrowser'("https://google.c
 
 ### Keyword sample:
 ```groovy
-	@Keyword
-	def openBrowser(String url) {
-		System.setProperty("webdriver.ie.driver", DriverFactory.getIEDriverPath());
-		InternetExplorerOptions edgeIe11Options = new InternetExplorerOptions();
-		Map<String, Object> ops = (Map<String, Object>) edgeIe11Options.getCapability("se:ieOptions");
-		ops.put("ie.edgechromium", true);
-		ops.put("ie.edgepath", "C:\\Program Files (x86 \\Microsoft\\Edge\\Application\\msedge.exe");
-		edgeIe11Options.setCapability("ignoreProtectedModeSettings", true);
+@Keyword
+def openBrowser(String url) {
+	System.setProperty("webdriver.ie.driver", DriverFactory.getIEDriverPath());
+	InternetExplorerOptions edgeIe11Options = new InternetExplorerOptions();
+	Map<String, Object> ops = (Map<String, Object>) edgeIe11Options.getCapability("se:ieOptions");
+	ops.put("ie.edgechromium", true);
+	ops.put("ie.edgepath", "C:\\Program Files (x86 \\Microsoft\\Edge\\Application\\msedge.exe");
+	edgeIe11Options.setCapability("ignoreProtectedModeSettings", true);
 
-		WebDriver driver = new InternetExplorerDriver(edgeIe11Options);
-		driver.get(url)
-		DriverFactory.changeWebDriver(driver)
-	}
+	WebDriver driver = new InternetExplorerDriver(edgeIe11Options);
+	driver.get(url)
+	DriverFactory.changeWebDriver(driver)
+}
 ```
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
