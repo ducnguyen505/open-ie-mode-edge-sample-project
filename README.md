@@ -43,7 +43,7 @@ def openBrowser(String url) {
 	ops.put("ie.edgechromium", true);
 	ops.put("ie.edgepath", "C:\\Program Files (x86 \\Microsoft\\Edge\\Application\\msedge.exe");
 	edgeIe11Options.setCapability("ignoreProtectedModeSettings", true);
-
+	edgeIe11Options.setCapability("ignoreZoomSetting", true);
 	WebDriver driver = new InternetExplorerDriver(edgeIe11Options);
 	driver.get(url)
 	DriverFactory.changeWebDriver(driver)
